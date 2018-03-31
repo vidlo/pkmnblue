@@ -1,0 +1,17 @@
+/CommandHelp.class
+/CommandHelp2.class
+/CommandMove.class
+/CommandPrintInventory.class
+/CommandTake.class
+/CommandTalk.class
+/CommandTerminate.class
+/CommandUse.class
+/Game.class
+/GamePlan.class
+/ICommand.class
+/IGame.class
+/Inventar.class
+/ListOfCommands.class
+/Location.class
+/Postava.class
+/Vec.class
