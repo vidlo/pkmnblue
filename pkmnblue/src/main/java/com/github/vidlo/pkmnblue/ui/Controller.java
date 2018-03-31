@@ -1,8 +1,14 @@
 package com.github.vidlo.pkmnblue.ui;
 
+import java.util.Observable;
+import java.util.Observer;
+
 import com.github.vidlo.pkmnblue.model.IGame;
+import com.github.vidlo.pkmnblue.model.Vec;
+import com.github.vidlo.pkmnblue.model.Location;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
@@ -14,10 +20,12 @@ import javafx.scene.layout.VBox;
  * @author Filip Vencovsky
  *
  */
-public class Controller extends VBox {
+public class Controller extends VBox implements Observer {
 	
 	@FXML private TextField vstupniText;
 	@FXML private TextArea vystup;
+	@FXML private ListView<Vec> seznamVeciMistnost;
+	@FXML private ListView<Location> seznamVychodu;
 	private IGame hra;
 	
 	/**
@@ -43,6 +51,14 @@ public class Controller extends VBox {
 		vystup.setText(hra.getProlog());
 		vystup.setEditable(false);
 		this.hra = hra;
+		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
+		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
+		System.out.println("");
+	}
+	
+	@Override
+	public void update(Observable arg0, Object arg1) {		
+	 	
 	}
 
 }

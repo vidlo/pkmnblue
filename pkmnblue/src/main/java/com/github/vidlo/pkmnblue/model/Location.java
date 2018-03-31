@@ -223,6 +223,16 @@ public class Location {
         }
         return vyberana;
     }
+    
+    public Collection<Vec> getVeci() {
+    	return Collections.unmodifiableCollection(zoznamVeci.values());
+    	}
+   
+    	@Override
+    	public String toString() {
+    	// TODO Auto-generated method stub
+    	return getName();
+    	}
 
     /**
      * Metoda obsahujeVec vrací zda se věc nachází v prostoru

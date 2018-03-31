@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
@@ -22,25 +25,63 @@
           </Menu>
         </menus>
       </MenuBar>
-      <AnchorPane prefHeight="716.0" prefWidth="1280.0">
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0">
          <children>
-            <ImageView fitHeight="559.0" fitWidth="512.0" layoutX="754.0" layoutY="68.0" pickOnBounds="true">
+            <ImageView fitHeight="559.0" fitWidth="609.0" layoutX="740.0" layoutY="68.0" pickOnBounds="true">
                <image>
                   <Image url="@mapa.png" />
                </image>
             </ImageView>
-            <TextArea fx:id="vystup" layoutX="14.0" layoutY="13.0" prefHeight="395.0" prefWidth="331.0" />
-            <ImageView fitHeight="165.0" fitWidth="387.0" layoutX="361.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+            <TextArea fx:id="vystup" layoutX="14.0" layoutY="182.0" prefHeight="245.0" prefWidth="705.0" />
+            <ImageView fitHeight="165.0" fitWidth="387.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="vstupniText" layoutX="14.0" layoutY="419.0" prefHeight="25.0" prefWidth="331.0" />
-            <ListView fx:id="zoznamPostav" layoutX="14.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" />
-            <ListView fx:id="seznamVeciMistnost" layoutX="261.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" />
-            <ListView fx:id="seznamVychodu" layoutX="508.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" />
-            <ListView fx:id="inventar" layoutX="361.0" layoutY="215.0" prefHeight="171.0" prefWidth="170.0" />
-            <ImageView fitHeight="171.0" fitWidth="176.0" layoutX="540.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true" />
+            <TextField fx:id="vstupniText" onAction="#odesliPrikaz" layoutX="14.0" layoutY="437.0" prefHeight="25.0" prefWidth="705.0" />
+            <ListView fx:id="seznamPostav" layoutX="14.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
+            <ListView fx:id="seznamVeciMistnost" layoutX="245.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
+            <ListView fx:id="seznamVychodu" layoutX="476.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
+            <ListView fx:id="inventar" layoutX="406.0" layoutY="33.0" prefHeight="132.0" prefWidth="170.0" />
+            <ImageView fitHeight="132.0" fitWidth="176.0" layoutX="576.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+            <Label contentDisplay="CENTER" layoutX="14.0" layoutY="482.0" prefHeight="33.0" prefWidth="56.0" text="Postavy" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="245.0" layoutY="482.0" prefHeight="33.0" prefWidth="56.0" text="Veci" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="476.0" layoutY="482.0" prefHeight="33.0" prefWidth="56.0" text="Východy" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="40.0" fitWidth="65.0" layoutX="1205.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@avatar514181_1_zpsfxp46su9.gif~c200.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="327.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pokeball.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="3.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@pokeball.gif" />
+               </image>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+            </ImageView>
+            <Label contentDisplay="CENTER" layoutX="406.0" prefHeight="33.0" prefWidth="56.0" text="Inventár" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
    </children>
