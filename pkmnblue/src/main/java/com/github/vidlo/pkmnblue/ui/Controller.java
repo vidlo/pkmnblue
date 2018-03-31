@@ -18,14 +18,20 @@ public class Controller extends GridPane {
 	
 	@FXML private TextField vstupniText;
 	@FXML private TextArea vystup;
+	private IGame hra;
 	
 	/**
 	 * metoda čte příkaz ze vstupního textového pole
 	 * a zpracuje ho
 	 */
 	@FXML public void odesliPrikaz() {
-		System.out.println(vstupniText.getText());
+		String vystupPrikazu = hra.processCommand(vstupniText.getText());
+		vystup.appendText("\n----------\n"+vstupniText.getText()+"\n----------\n");
+		vystup.appendText(vystupPrikazu);
 		vstupniText.setText("");
+		
+		if(hra.isGameOver()) {
+			vstupniText.setDisable(true);}
 	}
 	
 	/**
@@ -36,6 +42,7 @@ public class Controller extends GridPane {
 	public void inicializuj(IGame hra) {
 		vystup.setText(hra.getProlog());
 		vystup.setEditable(false);
+		this.hra = hra;
 	}
 
 }
