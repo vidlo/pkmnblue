@@ -4,6 +4,7 @@ import com.github.vidlo.pkmnblue.model.IGame;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.GridPane;
 
 /**
@@ -16,6 +17,7 @@ import javafx.scene.layout.GridPane;
 public class Controller extends GridPane {
 	
 	@FXML private TextField vstupniText;
+	@FXML private TextArea vystup;
 	
 	/**
 	 * metoda čte příkaz ze vstupního textového pole
@@ -32,7 +34,8 @@ public class Controller extends GridPane {
 	 * @param objekt spuštěné hry
 	 */
 	public void inicializuj(IGame hra) {
-		
+		vystup.setText(hra.getProlog());
+		vystup.setEditable(false);
 	}
 
 }

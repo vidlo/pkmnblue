@@ -45,7 +45,7 @@ public class Application extends javafx.application.Application {
 		
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass()
-		          .getResource("gui.fxml"));
+		          .getResource("gui1.fxml"));
 		Parent root = loader.load();
 
 		Controller controller = loader.getController();
