@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.vidlo.pkmnblue.ui.Controller">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="Hra">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Nová hra" />
+                  <MenuItem mnemonicParsing="false" text="Koniec" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Nápoveda">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Príručka" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane prefHeight="716.0" prefWidth="1280.0">
+         <children>
+            <ImageView fitHeight="559.0" fitWidth="512.0" layoutX="754.0" layoutY="68.0" pickOnBounds="true">
+               <image>
+                  <Image url="@mapa.png" />
+               </image>
+            </ImageView>
+            <TextArea fx:id="vystup" layoutX="14.0" layoutY="13.0" prefHeight="395.0" prefWidth="331.0" />
+            <ImageView fitHeight="165.0" fitWidth="387.0" layoutX="361.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="vstupniText" layoutX="14.0" layoutY="419.0" prefHeight="25.0" prefWidth="331.0" />
+            <ListView fx:id="zoznamPostav" layoutX="14.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="seznamVeciMistnost" layoutX="261.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="seznamVychodu" layoutX="508.0" layoutY="465.0" prefHeight="200.0" prefWidth="200.0" />
+            <ListView fx:id="inventar" layoutX="361.0" layoutY="215.0" prefHeight="171.0" prefWidth="170.0" />
+            <ImageView fitHeight="171.0" fitWidth="176.0" layoutX="540.0" layoutY="215.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>

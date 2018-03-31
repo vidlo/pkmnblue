@@ -46,16 +46,16 @@ fx:controller="com.github.vidlo.pkmnblue.ui.Controller">
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <ListView id="zoznamLokacii" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
-            <ListView id="zoznamPostav" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <ListView id="zoznamVeci" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <TextField id="textVstup" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <ListView fx:id="seznamVychodu" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+            <ListView fx:id="zoznamPostav" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <ListView fx:id="seznamVeciMistnost" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField fx:id="vstupniText" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="50.0" />
                </GridPane.margin>
             </TextField>
-            <TextArea id="textVypis" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <ImageView id="mapa" fitHeight="240.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
+            <TextArea fx:id="vystup" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <ImageView fx:id="mapa" fitHeight="240.0" fitWidth="350.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1">
                <GridPane.margin>
                   <Insets bottom="-120.0" />
                </GridPane.margin>
@@ -64,14 +64,14 @@ fx:controller="com.github.vidlo.pkmnblue.ui.Controller">
                </image>
             </ImageView>
             <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
-            <ImageView id="logo" fitHeight="102.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="logo" fitHeight="102.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@logo.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="120.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
-            <ListView id="inventar" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-            <Button id="posli" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="OK" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <ListView fx:id="inventar" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+            <Button fx:id="posli" mnemonicParsing="false" prefHeight="30.0" prefWidth="150.0" text="OK" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <GridPane.margin>
                   <Insets bottom="-50.0" left="100.0" />
                </GridPane.margin>

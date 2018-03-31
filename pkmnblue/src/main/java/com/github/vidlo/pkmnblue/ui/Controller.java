@@ -5,7 +5,7 @@ import com.github.vidlo.pkmnblue.model.IGame;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextArea;
-import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 
 /**
  * Kontroler, který zprostředkovává komunikaci mezi grafikou
@@ -14,7 +14,7 @@ import javafx.scene.layout.GridPane;
  * @author Filip Vencovsky
  *
  */
-public class Controller extends GridPane {
+public class Controller extends VBox {
 	
 	@FXML private TextField vstupniText;
 	@FXML private TextArea vystup;
