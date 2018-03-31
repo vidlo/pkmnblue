@@ -1,6 +1,7 @@
 /* Soubor je ulozen v kodovani UTF-8.
  * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
 package com.github.vidlo.pkmnblue.model;
+import java.util.Observable;
 /**
  * Class HerniPlan - třída představující mapu a stav adventury.
  * 
@@ -11,7 +12,7 @@ package com.github.vidlo.pkmnblue.model;
  * @author   Ondrej Vitko
  * @version  ZS 2017/2018
  */
-public class GamePlan {
+public class GamePlan extends Observable {
     private Location currentLocation;
     private Inventar inventar;
     
@@ -103,6 +104,8 @@ public class GamePlan {
      */
     public void setCurrentLocation(Location location) {
        currentLocation = location;
+       setChanged();
+       notifyObservers();
     }
 
     /**

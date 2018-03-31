@@ -53,12 +53,15 @@ public class Controller extends VBox implements Observer {
 		this.hra = hra;
 		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
 		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
-		System.out.println("");
+		hra.getGamePlan().addObserver(this);
 	}
 	
 	@Override
 	public void update(Observable arg0, Object arg1) {		
-	 	
+		seznamVeciMistnost.getItems().clear();
+		seznamVychodu.getItems().clear();
+		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
+		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
 	}
 
 }

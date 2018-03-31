@@ -61,6 +61,12 @@ public class Vec
        return prenosnost;
    }
    
+   @Override
+   public String toString() {
+   // TODO Auto-generated method stub
+   return getNazov();
+   }
+   
    /**
      * Metoda vracia instanci třiedy Vec, ktorú postava chce
      */
