@@ -31,6 +31,8 @@ public interface IGame
      */
      public boolean isGameOver();
      
+     public void setGameOver(boolean konecHry);
+     
     /**
      * Metoda zpracuje řetězec uvedený jako parametr, rozdělí ho na slovo příkazu a další parametry.
      * Pak otestuje zda příkaz je klíčovým slovem  např. jdi.

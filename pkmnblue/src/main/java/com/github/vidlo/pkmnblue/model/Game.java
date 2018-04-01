@@ -136,7 +136,7 @@ public class Game implements IGame
      *
      * @param příznak, zda hra již skončila
      */
-    void setGameOver(boolean konecHry)
+    public void setGameOver(boolean konecHry)
     {
         this.gameOver = konecHry;
     }
