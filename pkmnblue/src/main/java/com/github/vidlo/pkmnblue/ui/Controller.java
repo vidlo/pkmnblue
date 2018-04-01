@@ -3,7 +3,9 @@ package com.github.vidlo.pkmnblue.ui;
 import java.util.Observable;
 import java.util.Observer;
 
+import com.github.vidlo.pkmnblue.model.GamePlan;
 import com.github.vidlo.pkmnblue.model.IGame;
+import com.github.vidlo.pkmnblue.model.Inventar;
 import com.github.vidlo.pkmnblue.model.Vec;
 import com.github.vidlo.pkmnblue.model.Location;
 import com.github.vidlo.pkmnblue.model.Postava;
@@ -18,8 +20,6 @@ import javafx.scene.layout.VBox;
 /**
  * Kontroler, který zprostředkovává komunikaci mezi grafikou
  * a logikou adventury
- * 
- * @author Filip Vencovsky
  *
  */
 public class Controller extends VBox implements Observer {
@@ -29,6 +29,7 @@ public class Controller extends VBox implements Observer {
 	@FXML private ListView<Vec> seznamVeciMistnost;
 	@FXML private ListView<Location> seznamVychodu;
 	@FXML private ListView<Postava> seznamPostav;
+	@FXML private ListView<Vec> inventar;
 	@FXML private ImageView uzivatel;
 	private IGame hra;
 	
@@ -58,6 +59,7 @@ public class Controller extends VBox implements Observer {
 		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
 		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
 		seznamPostav.getItems().addAll(hra.getGamePlan().getCurrentLocation().getPostavy());
+		inventar.getItems().addAll(hra.getGamePlan().getInventar().getVeci2());
 		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
 		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
 		hra.getGamePlan().addObserver(this);
@@ -68,9 +70,11 @@ public class Controller extends VBox implements Observer {
 		seznamVeciMistnost.getItems().clear();
 		seznamVychodu.getItems().clear();
 		seznamPostav.getItems().clear();
+		inventar.getItems().clear();
 		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
 		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
 		seznamPostav.getItems().addAll(hra.getGamePlan().getCurrentLocation().getPostavy());
+		inventar.getItems().addAll(hra.getGamePlan().getInventar().getVeci2());
 		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
 		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
 	}

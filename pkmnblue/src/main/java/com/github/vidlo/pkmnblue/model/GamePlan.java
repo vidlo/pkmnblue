@@ -1,6 +1,8 @@
 /* Soubor je ulozen v kodovani UTF-8.
  * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
 package com.github.vidlo.pkmnblue.model;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Observable;
 /**
  * Class HerniPlan - třída představující mapu a stav adventury.
@@ -116,6 +118,7 @@ public class GamePlan extends Observable {
     public Inventar getInventar() {
         return inventar;
     }
+    
     
     public boolean vyhra() {
         if(getInventar().getVeci().contains("magicarp") || getInventar().getVeci().contains("pidgey")|| getInventar().getVeci().contains("rattata")) {

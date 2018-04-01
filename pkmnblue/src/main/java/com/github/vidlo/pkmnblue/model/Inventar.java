@@ -94,4 +94,14 @@ public class Inventar
         }
         return text;
     }
+    
+    public Collection<Vec> getVeci2() {
+        return Collections.unmodifiableCollection(zoznam.values());
+    }
+    
+    @Override
+    public String toString() {
+    // TODO Auto-generated method stub
+    return getVeci();
+    }
 }
