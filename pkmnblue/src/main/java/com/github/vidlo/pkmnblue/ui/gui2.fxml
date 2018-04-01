@@ -29,21 +29,20 @@
          <children>
             <ImageView fitHeight="559.0" fitWidth="609.0" layoutX="740.0" layoutY="68.0" pickOnBounds="true">
                <image>
-                  <Image url="@mapa.png" />
+                  <Image url="@zdroj/mapa.png" />
                </image>
             </ImageView>
-            <TextArea fx:id="vystup" layoutX="14.0" layoutY="182.0" prefHeight="245.0" prefWidth="705.0" />
+            <TextArea fx:id="vystup" layoutX="14.0" layoutY="182.0" prefHeight="245.0" prefWidth="591.0" />
             <ImageView fitHeight="165.0" fitWidth="387.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@logo.png" />
+                  <Image url="@zdroj/logo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="vstupniText" layoutX="14.0" layoutY="437.0" onAction="#odesliPrikaz" prefHeight="25.0" prefWidth="705.0" />
+            <TextField fx:id="vstupniText" layoutX="14.0" layoutY="437.0" onAction="#odesliPrikaz" prefHeight="25.0" prefWidth="591.0" />
             <ListView fx:id="seznamPostav" layoutX="14.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
             <ListView fx:id="seznamVeciMistnost" layoutX="245.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
             <ListView fx:id="seznamVychodu" layoutX="476.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
-            <ListView fx:id="inventar" layoutX="406.0" layoutY="33.0" prefHeight="132.0" prefWidth="170.0" />
-            <ImageView fitHeight="132.0" fitWidth="176.0" layoutX="576.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true" />
+            <ListView fx:id="inventar" layoutX="783.0" layoutY="151.0" prefHeight="132.0" prefWidth="170.0" />
             <Label contentDisplay="CENTER" layoutX="14.0" layoutY="482.0" prefHeight="33.0" prefWidth="56.0" text="Postavy" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
@@ -61,27 +60,60 @@
             </Label>
             <ImageView fx:id="uzivatel" fitHeight="40.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@avatar514181_1_zpsfxp46su9.gif~c200.gif" />
+                  <Image url="@zdroj/avatar.gif" />
                </image>
             </ImageView>
             <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="327.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pokeball.gif" />
+                  <Image url="@zdroj/pokeball.gif" />
                </image>
             </ImageView>
             <ImageView fitHeight="79.0" fitWidth="80.0" layoutX="3.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@pokeball.gif" />
+                  <Image url="@zdroj/pokeball.gif" />
                </image>
                <rotationAxis>
                   <Point3D />
                </rotationAxis>
             </ImageView>
-            <Label contentDisplay="CENTER" layoutX="406.0" prefHeight="33.0" prefWidth="56.0" text="Inventár" textAlignment="CENTER">
+            <Label contentDisplay="CENTER" layoutX="625.0" layoutY="4.0" prefHeight="33.0" prefWidth="56.0" text="Inventár" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Label>
+            <ImageView fx:id="pokeball" fitHeight="80.0" fitWidth="80.0" layoutX="636.0" layoutY="37.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/Pokeball.png" />
+               </image></ImageView>
+            <ImageView fx:id="magicarp" fitHeight="150.0" fitWidth="150.0" layoutX="420.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/magicarp.png" />
+               </image></ImageView>
+            <ImageView fx:id="prut" fitHeight="80.0" fitWidth="80.0" layoutX="635.0" layoutY="125.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/prut.png" />
+               </image></ImageView>
+            <ImageView fx:id="lopata" fitHeight="80.0" fitWidth="80.0" layoutX="636.0" layoutY="217.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/lopata.png" />
+               </image></ImageView>
+            <ImageView fx:id="zizaly" fitHeight="80.0" fitWidth="80.0" layoutX="636.0" layoutY="308.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/zizaly.png" />
+               </image></ImageView>
+            <ImageView fx:id="rattata" fitHeight="150.0" fitWidth="150.0" layoutX="420.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/Rattata.png" />
+               </image></ImageView>
+            <ImageView fx:id="pidgey" fitHeight="150.0" fitWidth="150.0" layoutX="420.0" layoutY="14.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/pidgey.png" />
+               </image></ImageView>
+            <ImageView fx:id="syr" fitHeight="80.0" fitWidth="80.0" layoutX="635.0" layoutY="397.0" pickOnBounds="true">
+               <image>
+                  <Image url="@zdroj/syr.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

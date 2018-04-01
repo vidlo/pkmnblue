@@ -50,5 +50,7 @@ public interface IGame
      * @return    odkaz na herní plán
      */
      public GamePlan getGamePlan();
+     
+     public Inventar getInventar();
 
 }

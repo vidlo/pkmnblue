@@ -39,6 +39,16 @@ public class Controller extends VBox implements Observer {
 	@FXML private MenuItem novaHra;
 	@FXML private MenuItem koniec;
 	@FXML private MenuItem prirucka;
+	
+	@FXML private ImageView pokeball;
+	@FXML private ImageView prut;
+	@FXML private ImageView lopata;
+	@FXML private ImageView syr;
+	@FXML private ImageView zizaly;
+	@FXML private ImageView magicarp;
+	@FXML private ImageView pidgey;
+	@FXML private ImageView rattata;
+	
 	private IGame hra;
 	
 	/**
@@ -95,7 +105,17 @@ public class Controller extends VBox implements Observer {
 		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
 		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
 		hra.getGamePlan().addObserver(this);
+		
+		pokeball.setVisible(false);
+		prut.setVisible(false);
+		lopata.setVisible(false);
+		zizaly.setVisible(false);
+		syr.setVisible(false);
+		magicarp.setVisible(false);
+		pidgey.setVisible(false);
+		rattata.setVisible(false);
 	}
+	
 	
 
 	@Override
@@ -110,6 +130,15 @@ public class Controller extends VBox implements Observer {
 		inventar.getItems().addAll(hra.getGamePlan().getInventar().getVeci2());
 		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
 		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
+		if(hra.getGamePlan().getInventar().obsahujeVec("pokeball")) {pokeball.setVisible(true);} else {pokeball.setVisible(false);}
+		if(hra.getGamePlan().getInventar().obsahujeVec("rybarsky_prut")) {prut.setVisible(true);} else {prut.setVisible(false);}
+		if(hra.getGamePlan().getInventar().obsahujeVec("lopata")) {lopata.setVisible(true);} else {lopata.setVisible(false);}
+		if(hra.getGamePlan().getInventar().obsahujeVec("zizaly")) {zizaly.setVisible(true);} else {zizaly.setVisible(false);}
+		if(hra.getGamePlan().getInventar().obsahujeVec("syr")) {syr.setVisible(true);} else {syr.setVisible(false);}
+		if(hra.getGamePlan().getInventar().obsahujeVec("magicarp")) {magicarp.setVisible(true);} else {magicarp.setVisible(false);}
+		if(hra.getGamePlan().getInventar().obsahujeVec("rattata")) {syr.setVisible(true);} else {rattata.setVisible(false);}
+		if(hra.getGamePlan().getInventar().obsahujeVec("pidgey")) {pidgey.setVisible(true);} else {pidgey.setVisible(false);}
+		
 	}
 
 }
