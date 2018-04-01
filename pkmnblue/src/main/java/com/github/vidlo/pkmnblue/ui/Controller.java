@@ -10,6 +10,7 @@ import com.github.vidlo.pkmnblue.model.Location;
 import javafx.fxml.FXML;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.control.TextArea;
 import javafx.scene.layout.VBox;
 
@@ -26,6 +27,7 @@ public class Controller extends VBox implements Observer {
 	@FXML private TextArea vystup;
 	@FXML private ListView<Vec> seznamVeciMistnost;
 	@FXML private ListView<Location> seznamVychodu;
+	@FXML private ImageView uzivatel;
 	private IGame hra;
 	
 	/**
@@ -53,6 +55,8 @@ public class Controller extends VBox implements Observer {
 		this.hra = hra;
 		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
 		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
+		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
+		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
 		hra.getGamePlan().addObserver(this);
 	}
 	
@@ -62,6 +66,8 @@ public class Controller extends VBox implements Observer {
 		seznamVychodu.getItems().clear();
 		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
 		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
+		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
+		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
 	}
 
 }

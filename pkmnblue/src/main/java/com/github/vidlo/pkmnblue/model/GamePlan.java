@@ -30,13 +30,13 @@ public class GamePlan extends Observable {
      */
     private void prepareWorldMap() {
         //vytvorenie jednotliych lokacii
-        Location pokeDoupe = new Location("pokeDoupe","Hráčova detská izba v hráčovom dome");
-        Location kuchyna = new Location("kuchyna", "Kuchyňa v hráčovom dome");
-        Location pivnica = new Location("pivnica","Plesnivá pivnica v hráčovom dome");
-        Location palletTown = new Location("palletTown","Hráčovo rodné mesto");
-        Location sklad = new Location("sklad","Sklad náradia");
-        Location laboratorium = new Location("laboratorium","Laboratórium profesora Oaka");
-        Location routeJedna = new Location("routeJedna","Divočina za mestom zvaná Route 1");
+        Location pokeDoupe = new Location("pokeDoupe","Hráčova detská izba v hráčovom dome", 1205.0, 305.0);
+        Location kuchyna = new Location("kuchyna", "Kuchyňa v hráčovom dome", 1205.0, 345.0);
+        Location pivnica = new Location("pivnica","Plesnivá pivnica v hráčovom dome", 1205.0, 387.0);
+        Location palletTown = new Location("palletTown","Hráčovo rodné mesto", 913.0, 285.0);
+        Location sklad = new Location("sklad","Sklad náradia", 866.0, 375.0);
+        Location laboratorium = new Location("laboratorium","Laboratórium profesora Oaka", 1133.0, 475.0);
+        Location routeJedna = new Location("routeJedna","Divočina za mestom zvaná Route 1", 997.0, 89.0);
 
         //priechody medzi lokaciami
         pokeDoupe.addExit(kuchyna);

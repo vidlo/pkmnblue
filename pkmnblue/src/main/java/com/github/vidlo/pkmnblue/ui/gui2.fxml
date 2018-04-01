@@ -38,7 +38,7 @@
                   <Image url="@logo.png" />
                </image>
             </ImageView>
-            <TextField fx:id="vstupniText" onAction="#odesliPrikaz" layoutX="14.0" layoutY="437.0" prefHeight="25.0" prefWidth="705.0" />
+            <TextField fx:id="vstupniText" layoutX="14.0" layoutY="437.0" onAction="#odesliPrikaz" prefHeight="25.0" prefWidth="705.0" />
             <ListView fx:id="seznamPostav" layoutX="14.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
             <ListView fx:id="seznamVeciMistnost" layoutX="245.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
             <ListView fx:id="seznamVychodu" layoutX="476.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
@@ -59,7 +59,7 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <ImageView fitHeight="40.0" fitWidth="65.0" layoutX="1205.0" layoutY="305.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="uzivatel" fitHeight="40.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@avatar514181_1_zpsfxp46su9.gif~c200.gif" />
                </image>

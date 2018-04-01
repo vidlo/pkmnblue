@@ -28,6 +28,8 @@ public class Location {
     private Set<Location> exits;   // obsahuje susedné lokacie
     private Map<String, Vec> zoznamVeci;
     private Map<String, Postava> zoznamPostav;
+    private double x;
+    private double y;
     
     /**
      * Vytvoření lokace se zadaným popisem, 
@@ -35,12 +37,14 @@ public class Location {
      * @param    name nazov lokace, jednoznačný identifikátor, jedno slovo nebo víceslovný název bez mezer
      * @param    description Popis lokace
      */
-    public Location(String name, String description) {
+    public Location(String name, String description, double x, double y) {
         this.name = name;
         this.description = description;
         exits = new HashSet<Location>();
         zoznamVeci = new HashMap<String, Vec>();
         zoznamPostav = new HashMap<String, Postava>();
+        this.x = x;
+        this.y = y;
     }
 
     /**
@@ -226,6 +230,22 @@ public class Location {
     
     public Collection<Vec> getVeci() {
     	return Collections.unmodifiableCollection(zoznamVeci.values());
+    	}
+    
+    public double getX() {
+    	return x;
+    	}
+    
+    	public void setX(double x) {
+    	this.x = x;
+    	}
+    	
+    	public double getY() {
+    	return y;
+    	}
+    	
+    	public void setY(double y) {
+    	this.y = y;
     	}
    
     	@Override
