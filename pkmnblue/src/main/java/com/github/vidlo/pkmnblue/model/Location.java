@@ -28,19 +28,23 @@ public class Location {
     private Set<Location> exits;   // obsahuje susedné lokacie
     private Map<String, Vec> zoznamVeci;
     private Map<String, Postava> zoznamPostav;
+    private double x;
+    private double y;
     
     /**
      * Vytvoření lokace se zadaným popisem, 
      *
      * @param    name nazov lokace, jednoznačný identifikátor, jedno slovo nebo víceslovný název bez mezer
-     * @param    description Popis lokace
+     * @param    description Popis lokace suradnice x, y
      */
-    public Location(String name, String description) {
+    public Location(String name, String description, double x, double y) {
         this.name = name;
         this.description = description;
         exits = new HashSet<Location>();
         zoznamVeci = new HashMap<String, Vec>();
         zoznamPostav = new HashMap<String, Postava>();
+        this.x = x;
+        this.y = y;
     }
 
     /**
@@ -223,6 +227,32 @@ public class Location {
         }
         return vyberana;
     }
+    
+    public Collection<Vec> getVeci() {
+    	return Collections.unmodifiableCollection(zoznamVeci.values());
+    	}
+    
+    public double getX() {
+    	return x;
+    	}
+    
+    	public void setX(double x) {
+    	this.x = x;
+    	}
+    	
+    	public double getY() {
+    	return y;
+    	}
+    	
+    	public void setY(double y) {
+    	this.y = y;
+    	}
+   
+    	@Override
+    	public String toString() {
+    	// TODO Auto-generated method stub
+    	return getName();
+    	}
 
     /**
      * Metoda obsahujeVec vrací zda se věc nachází v prostoru
@@ -237,8 +267,9 @@ public class Location {
         }     
         return false;  
     }
+    
 
-    /**
+	/**
      * Metoda vlozPostavu vloží postavu do prostoru
      *
      * @param postava       Meno postavy, kterou chceme do prostoru vložit
@@ -294,4 +325,17 @@ public class Location {
         zoznamPostav.remove(meno);
         return true;
     }
+    
+    /**
+     * metoda vrací seznam postav v místnosti
+     * @return kolekce postav
+     */
+     public Collection<Postava> getPostavy() {
+     	return Collections.unmodifiableCollection(zoznamPostav.values());
+     }
+
+     public String toString1() {
+ 	// TODO Auto-generated method stub
+ 	return getName();
+ 	}
 }

@@ -31,6 +31,13 @@ public interface IGame
      */
      public boolean isGameOver();
      
+     
+     /**
+ 	 * metoda nastavi koniec hry
+ 	 * @return true 
+ 	 */
+     public void setGameOver(boolean konecHry);
+     
     /**
      * Metoda zpracuje řetězec uvedený jako parametr, rozdělí ho na slovo příkazu a další parametry.
      * Pak otestuje zda příkaz je klíčovým slovem  např. jdi.
@@ -48,5 +55,11 @@ public interface IGame
      * @return    odkaz na herní plán
      */
      public GamePlan getGamePlan();
+     
+     /**
+ 	 * metoda odkaz na inventar
+ 	 * @return odkaz inventar
+ 	 */
+     public Inventar getInventar();
 
 }

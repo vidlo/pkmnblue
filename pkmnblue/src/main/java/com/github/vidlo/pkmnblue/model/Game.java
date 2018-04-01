@@ -2,6 +2,7 @@
  * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
 package com.github.vidlo.pkmnblue.model;
 
+
 /**
  * Toto je hlavní třída logiky aplikace. Třída vytváří instanci třídy
  * GamePlan, která inicializuje lokace hry a vytváří seznam platných
@@ -19,6 +20,7 @@ public class Game implements IGame
     private ListOfCommands listOfCommands;
     private GamePlan gamePlan;
     private boolean gameOver = false;
+    private Inventar inventar;
     
 
     /**
@@ -136,7 +138,7 @@ public class Game implements IGame
      *
      * @param příznak, zda hra již skončila
      */
-    void setGameOver(boolean konecHry)
+    public void setGameOver(boolean konecHry)
     {
         this.gameOver = konecHry;
     }
@@ -151,4 +153,12 @@ public class Game implements IGame
     {
         return gamePlan;
     }
+    
+    /**
+ 	 * metoda odkaz na inventar
+ 	 * @return odkaz inventar
+ 	 */
+    public Inventar getInventar(){
+        return inventar;
+     }
 }

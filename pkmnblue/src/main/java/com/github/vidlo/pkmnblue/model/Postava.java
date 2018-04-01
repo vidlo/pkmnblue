@@ -77,6 +77,12 @@ public class Postava
         return vlastni;
     }
     
+    @Override
+    public String toString() {
+    // TODO Auto-generated method stub
+    return getMeno();
+    }
+    
     /**
      * Metoda implementuje rozhovor
      * Ak rozhovor prebehol, vrátí se druhý monológ od postavy. 

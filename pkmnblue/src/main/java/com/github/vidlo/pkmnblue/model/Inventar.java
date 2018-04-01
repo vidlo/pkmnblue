@@ -1,5 +1,7 @@
 package com.github.vidlo.pkmnblue.model;
 import java.util.*;
+
+import com.github.vidlo.pkmnblue.ui.Controller;
 /**
  * Trieda Inventar implementuje inventar ako ulozny pristor na veci
  *
@@ -62,7 +64,10 @@ public class Inventar
      * @return true ak je v inventary
      */
     public boolean obsahujeVec(String nazov) {
-        return (zoznam.containsKey(nazov));
+        if (zoznam.containsKey(nazov)) {
+        	return true;
+        }
+        return false;
     }
 
     /**
@@ -93,5 +98,19 @@ public class Inventar
             text +=  nazov + " ";
         }
         return text;
+    }
+    
+    /**
+	 * metoda vracia veci v miestnosti
+	 * @return kolekcia veci
+	 */
+    public Collection<Vec> getVeci2() {
+        return Collections.unmodifiableCollection(zoznam.values());
+    }
+    
+    @Override
+    public String toString() {
+    // TODO Auto-generated method stub
+    return getVeci();
     }
 }

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.github.vidlo</groupId>
-  <artifactId>pkmnblu</artifactId>
+  <artifactId>pkmnblue</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
@@ -42,7 +42,7 @@
 					<archive>
 						<manifest>
 							<addClasspath>true</addClasspath>
-							<mainClass>com.github.vidlo.pkmnblu.main.Start</mainClass>
+							<mainClass>com.github.vidlo.pkmnblue.main.Application</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

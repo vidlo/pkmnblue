@@ -1,6 +1,9 @@
 /* Soubor je ulozen v kodovani UTF-8.
  * Kontrola kódování: Příliš žluťoučký kůň úpěl ďábelské ódy. */
 package com.github.vidlo.pkmnblue.model;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Observable;
 /**
  * Class HerniPlan - třída představující mapu a stav adventury.
  * 
@@ -11,7 +14,7 @@ package com.github.vidlo.pkmnblue.model;
  * @author   Ondrej Vitko
  * @version  ZS 2017/2018
  */
-public class GamePlan {
+public class GamePlan extends Observable {
     private Location currentLocation;
     private Inventar inventar;
     
@@ -29,13 +32,13 @@ public class GamePlan {
      */
     private void prepareWorldMap() {
         //vytvorenie jednotliych lokacii
-        Location pokeDoupe = new Location("pokeDoupe","Hráčova detská izba v hráčovom dome");
-        Location kuchyna = new Location("kuchyna", "Kuchyňa v hráčovom dome");
-        Location pivnica = new Location("pivnica","Plesnivá pivnica v hráčovom dome");
-        Location palletTown = new Location("palletTown","Hráčovo rodné mesto");
-        Location sklad = new Location("sklad","Sklad náradia");
-        Location laboratorium = new Location("laboratorium","Laboratórium profesora Oaka");
-        Location routeJedna = new Location("routeJedna","Divočina za mestom zvaná Route 1");
+        Location pokeDoupe = new Location("pokeDoupe","Hráčova detská izba v hráčovom dome", 1205.0, 305.0);
+        Location kuchyna = new Location("kuchyna", "Kuchyňa v hráčovom dome", 1205.0, 345.0);
+        Location pivnica = new Location("pivnica","Plesnivá pivnica v hráčovom dome", 1205.0, 387.0);
+        Location palletTown = new Location("palletTown","Hráčovo rodné mesto", 913.0, 285.0);
+        Location sklad = new Location("sklad","Sklad náradia", 866.0, 375.0);
+        Location laboratorium = new Location("laboratorium","Laboratórium profesora Oaka", 1133.0, 475.0);
+        Location routeJedna = new Location("routeJedna","Divočina za mestom zvaná Route 1", 997.0, 89.0);
 
         //priechody medzi lokaciami
         pokeDoupe.addExit(kuchyna);
@@ -103,6 +106,8 @@ public class GamePlan {
      */
     public void setCurrentLocation(Location location) {
        currentLocation = location;
+       setChanged();
+       notifyObservers();
     }
 
     /**
@@ -113,6 +118,7 @@ public class GamePlan {
     public Inventar getInventar() {
         return inventar;
     }
+    
     
     public boolean vyhra() {
         if(getInventar().getVeci().contains("magicarp") || getInventar().getVeci().contains("pidgey")|| getInventar().getVeci().contains("rattata")) {
