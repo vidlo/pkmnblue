@@ -267,8 +267,9 @@ public class Location {
         }     
         return false;  
     }
+    
 
-    /**
+	/**
      * Metoda vlozPostavu vloží postavu do prostoru
      *
      * @param postava       Meno postavy, kterou chceme do prostoru vložit
@@ -324,4 +325,17 @@ public class Location {
         zoznamPostav.remove(meno);
         return true;
     }
+    
+    /**
+     * metoda vrací seznam postav v místnosti
+     * @return kolekce postav
+     */
+     public Collection<Postava> getPostavy() {
+     	return Collections.unmodifiableCollection(zoznamPostav.values());
+     }
+
+     public String toString1() {
+ 	// TODO Auto-generated method stub
+ 	return getName();
+ 	}
 }
