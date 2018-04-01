@@ -42,7 +42,6 @@
             <ListView fx:id="seznamPostav" layoutX="14.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
             <ListView fx:id="seznamVeciMistnost" layoutX="245.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
             <ListView fx:id="seznamVychodu" layoutX="476.0" layoutY="521.0" prefHeight="151.0" prefWidth="200.0" />
-            <ListView fx:id="inventar" layoutX="783.0" layoutY="151.0" prefHeight="132.0" prefWidth="170.0" />
             <Label contentDisplay="CENTER" layoutX="14.0" layoutY="482.0" prefHeight="33.0" prefWidth="56.0" text="Postavy" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
@@ -76,7 +75,7 @@
                   <Point3D />
                </rotationAxis>
             </ImageView>
-            <Label contentDisplay="CENTER" layoutX="625.0" layoutY="4.0" prefHeight="33.0" prefWidth="56.0" text="Inventár" textAlignment="CENTER">
+            <Label contentDisplay="CENTER" layoutX="648.0" layoutY="4.0" prefHeight="33.0" prefWidth="56.0" text="Inventár" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>

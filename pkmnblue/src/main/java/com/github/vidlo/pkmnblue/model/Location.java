@@ -35,7 +35,7 @@ public class Location {
      * Vytvoření lokace se zadaným popisem, 
      *
      * @param    name nazov lokace, jednoznačný identifikátor, jedno slovo nebo víceslovný název bez mezer
-     * @param    description Popis lokace
+     * @param    description Popis lokace suradnice x, y
      */
     public Location(String name, String description, double x, double y) {
         this.name = name;

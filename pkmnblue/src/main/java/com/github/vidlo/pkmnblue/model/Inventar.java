@@ -100,6 +100,10 @@ public class Inventar
         return text;
     }
     
+    /**
+	 * metoda vracia veci v miestnosti
+	 * @return kolekcia veci
+	 */
     public Collection<Vec> getVeci2() {
         return Collections.unmodifiableCollection(zoznam.values());
     }

@@ -154,6 +154,10 @@ public class Game implements IGame
         return gamePlan;
     }
     
+    /**
+ 	 * metoda odkaz na inventar
+ 	 * @return odkaz inventar
+ 	 */
     public Inventar getInventar(){
         return inventar;
      }

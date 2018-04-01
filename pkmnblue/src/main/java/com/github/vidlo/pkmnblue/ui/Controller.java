@@ -9,8 +9,6 @@ import com.github.vidlo.pkmnblue.model.Location;
 import com.github.vidlo.pkmnblue.model.Postava;
 import com.github.vidlo.pkmnblue.model.Game;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
@@ -34,7 +32,6 @@ public class Controller extends VBox implements Observer {
 	@FXML private ListView<Vec> seznamVeciMistnost;
 	@FXML private ListView<Location> seznamVychodu;
 	@FXML private ListView<Postava> seznamPostav;
-	@FXML private ListView<Vec> inventar;
 	@FXML private ImageView uzivatel;
 	@FXML private MenuItem novaHra;
 	@FXML private MenuItem koniec;
@@ -65,11 +62,17 @@ public class Controller extends VBox implements Observer {
 			vstupniText.setDisable(true);}
 	}
 	
+	/**
+	 * metoda zahaji novu hru
+	 */
 	@FXML public void setNovaHra() {
 		vstupniText.setDisable(false);
 		this.inicializuj(new Game());
 	}
 	
+	/**
+	 * metoda ukonci stavajucu hru
+	 */
 	@FXML public void setKoniec() {
 		hra.setGameOver(true);
 		if(hra.isGameOver()) {
@@ -77,11 +80,14 @@ public class Controller extends VBox implements Observer {
 			vstupniText.setDisable(true);}
 		}
 	
+	/**
+	 * metoda zobrazi prirucku vo webview
+	 */
 	@FXML public void displayHelp() {
 		Stage stage = new Stage();
         stage.setTitle("Príručka");
         WebView webview = new WebView();
-        webview.getEngine().load(Controller.class.getResource("prirucka.htm").toExternalForm());
+        webview.getEngine().load(Controller.class.getResource("zdroj/prirucka.htm").toExternalForm());
         stage.setScene(new Scene(webview, 500, 500));
         stage.show();
 	}
@@ -101,7 +107,6 @@ public class Controller extends VBox implements Observer {
 		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
 		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
 		seznamPostav.getItems().addAll(hra.getGamePlan().getCurrentLocation().getPostavy());
-		inventar.getItems().addAll(hra.getGamePlan().getInventar().getVeci2());
 		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
 		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
 		hra.getGamePlan().addObserver(this);
@@ -123,11 +128,9 @@ public class Controller extends VBox implements Observer {
 		seznamVeciMistnost.getItems().clear();
 		seznamVychodu.getItems().clear();
 		seznamPostav.getItems().clear();
-		inventar.getItems().clear();
 		seznamVeciMistnost.getItems().addAll(hra.getGamePlan().getCurrentLocation().getVeci());
 		seznamVychodu.getItems().addAll(hra.getGamePlan().getCurrentLocation().getExitLocations());
 		seznamPostav.getItems().addAll(hra.getGamePlan().getCurrentLocation().getPostavy());
-		inventar.getItems().addAll(hra.getGamePlan().getInventar().getVeci2());
 		uzivatel.setX(hra.getGamePlan().getCurrentLocation().getX());
 		uzivatel.setY(hra.getGamePlan().getCurrentLocation().getY());
 		if(hra.getGamePlan().getInventar().obsahujeVec("pokeball")) {pokeball.setVisible(true);} else {pokeball.setVisible(false);}
